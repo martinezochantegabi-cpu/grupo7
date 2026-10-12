@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Cookie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍪 Green Cookie</h1>
+        <p>Galletas saludables y deliciosas</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#pedido">Pedido</a>
+        <a href="#opinion">Opinión</a>
+    </nav>
+
+    <section id="inicio" class="principal">
+        <h2>Disfruta algo dulce y saludable</h2>
+        <p>Galletas horneadas con ingredientes seleccionados
+           y plátano como endulzante natural.</p>
+        <button onclick="irAProductos()">Ver productos</button>
+    </section>
+
+    <section id="productos">
+        <h2>Nuestras galletas</h2>
+
+        <div class="productos">
+            <div class="tarjeta">
+                <div class="imagen"></div>
+                <img src="imagenes/cacao.jpeg"
+         alt="Galletas con chispas de cacao">
+                 <h3>Chispas de cacao</h3>
+                <p>Galletas con un delicioso sabor a cacao.</p>
+                <button onclick="elegirSabor('Chispas de cacao')">
+                    Elegir
+                </button>
+            </div>
+
+            <div class="tarjeta">
+                <div class="imagen"></div>
+                <img src="imagenes/frutos.jpeg" alt="">
+                <h3>Frutos secos</h3>
+                <p>Una combinación de sabor y textura.</p>
+                <button onclick="elegirSabor('Frutos secos')">
+                    Elegir
+                </button>
+            </div>
+
+            <div class="tarjeta">
+                <div class="imagen"></div>
+                <img src="imagenes/semilla.jpeg" alt="Semillas">
+                <h3>Semillas</h3>
+                <p>Una opción diferente para disfrutar.</p>
+                <button onclick="elegirSabor('Semillas')">
+                    Elegir
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedido" class="formulario">
+        <h2>Realiza tu pedido de prueba</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+
+        <label for="sabor">Sabor:</label>
+        <select id="sabor">
+            <option value="Chispas de cacao">Chispas de cacao</option>
+            <option value="Frutos secos">Frutos secos</option>
+            <option value="Semillas">Semillas</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" min="1" value="1">
+
+        <button onclick="generarPedido()">Confirmar pedido</button>
+        <p id="resultado"></p>
+    </section>
+
+    <section id="opinion" class="formulario">
+        <h2>Déjanos tu opinión</h2>
+
+        <label for="opinionUsuario">¿Qué te parecen nuestras galletas?</label>
+        <textarea id="opinionUsuario"
+                  placeholder="Escribe tu opinión"></textarea>
+
+        <button onclick="guardarOpinion()">Enviar opinión</button>
+        <p id="mensajeOpinion"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Green Cookie - Un dulce momento saludable</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
